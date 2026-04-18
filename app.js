@@ -6,7 +6,7 @@
   let activeQuestions = [];
   let userAnswers     = {};        // { questionId: optionIndex }
   let selectedWeeks   = new Set(["all"]);
-  let showWeekLabels  = false;     // true only when specific weeks are chosen
+  const showWeekLabels = false;    // week dividers never shown
 
   /* ─── Helpers ────────────────────────────────────────────── */
   const $  = id => document.getElementById(id);
@@ -88,9 +88,6 @@
   function startQuiz() {
     const pool = getPool();
     if (!pool.length) return;
-
-    // Only show week dividers when user picked specific weeks
-    showWeekLabels = !selectedWeeks.has("all");
 
     activeQuestions = shuffle(pool);
     userAnswers     = {};
