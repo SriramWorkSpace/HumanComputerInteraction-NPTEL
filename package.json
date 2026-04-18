@@ -1,0 +1,9 @@
+{
+  "name": "hci-quiz",
+  "version": "1.0.0",
+  "description": "NPTEL HCI 120-question MCQ quiz app — Week 1 to 12",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve . --listen 3000 --no-clipboard"
+  }
+}
